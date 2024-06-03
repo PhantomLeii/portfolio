@@ -1,0 +1,2 @@
+- Start with Contact section
+- Start with footer section
