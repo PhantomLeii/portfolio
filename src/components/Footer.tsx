@@ -29,7 +29,7 @@ const Footer = ({ navLinks }: { navLinks: NavLink[] }) => {
         <div className="w-full flex flex-col justify-start items-start gap-2">
           <h4 className="pb-1 border-b border-teal text-start">Connect</h4>
           <nav className="flex flex-col justify-start items-start">
-            <a href="">
+            <a href="https://x.com/onlyphantomleii/">
               <div className="flex justify-center items-center gap-2">
                 <span>
                   <FaXTwitter />
@@ -39,7 +39,7 @@ const Footer = ({ navLinks }: { navLinks: NavLink[] }) => {
                 </span>
               </div>
             </a>
-            <a href="">
+            <a href="https://linkedin.com/in/phoshoko-ml">
               <div className="flex justify-center items-center gap-2">
                 <span>
                   <FaLinkedin />
@@ -49,7 +49,7 @@ const Footer = ({ navLinks }: { navLinks: NavLink[] }) => {
                 </span>
               </div>
             </a>
-            <a href="">
+            <a href="https://discordapp.com/users/1108815801873617007">
               <div className="flex justify-center items-center gap-2">
                 <span>
                   <FaDiscord />
@@ -59,7 +59,7 @@ const Footer = ({ navLinks }: { navLinks: NavLink[] }) => {
                 </span>
               </div>
             </a>
-            <a href="">
+            <a href="https://github.com/Phantomleii/">
               <div className="flex justify-center items-center gap-2">
                 <span>
                   <FaGithub />
