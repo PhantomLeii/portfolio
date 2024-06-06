@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "./components/Hero";
 import About from "@/components/About";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 import { aboutDesc, experience, navLinks, projects } from "@/data";
 import Experience from "./components/Experience";
@@ -16,7 +17,7 @@ const App = () => {
         <About aboutDesc={aboutDesc} />
         <Projects projectData={projects} />
         <Experience experienceData={experience} />
-        {/* Contact */}
+        <Contact />
         <Footer navLinks={navLinks} />
       </div>
     </div>

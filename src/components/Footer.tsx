@@ -5,7 +5,7 @@ const Footer = ({ navLinks }: { navLinks: NavLink[] }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 py-6 bg-sage text-noir flex flex-col justify-center items-center w-full">
+    <footer className="py-6 bg-sage text-noir flex flex-col justify-center items-center w-full">
       <div className="wrapper w-full grid grid-cols-1 md:grid-cols-3">
         <div className="h-full flex flex-col justify-center items-start">
           <a href="/" id="logo">
