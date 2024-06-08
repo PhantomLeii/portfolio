@@ -1,9 +1,19 @@
+import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xvoejykk");
   if (state.succeeded) {
-    return <p className="text-4xl text-ivory">Thanks for joining!</p>;
+    return (
+      <motion.p
+        className="text-4xl text-ivory"
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.58 }}
+      >
+        Thanks for joining!
+      </motion.p>
+    );
   }
   return (
     <form
