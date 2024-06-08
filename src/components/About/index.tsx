@@ -10,7 +10,7 @@ const About = ({ aboutDesc }: { aboutDesc: string }) => {
   return (
     <section
       id="about"
-      className="w-full py-6 flex justify-center items-center mb-16"
+      className="w-full py-6 flex justify-center items-center mb-16 overflow-hidden"
     >
       <div className="wrapper w-full flex flex-col justify-center items-center gap-16">
         <motion.h1

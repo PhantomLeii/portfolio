@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="py-6 flex flex-col justify-center items-center h-[calc(100vh-80px)]"
+      className="py-6 flex flex-col justify-center items-center h-[calc(100vh-80px)] overflow-x-hidden"
     >
       <div className="wrapper w-full text-center flex flex-col justify-center items-center ">
         <motion.p
