@@ -5,10 +5,9 @@ const Technologies = () => {
     <div className="w-full text-center flex flex-col justify-center items-center gap-10 py-6 mb-16">
       <motion.h2
         className="tracking-wide"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
         Technologies
       </motion.h2>
@@ -24,10 +23,9 @@ const Technologies = () => {
         ].map((src, index) => (
           <motion.span
             key={index}
-            initial={{ x: index % 2 === 0 ? -200 : 200, opacity: 0 }}
+            initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: index * 0.2 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <img className="w-24 h-24" src={src} alt="Technology" />
           </motion.span>
