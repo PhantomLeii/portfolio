@@ -1,5 +1,6 @@
 import React from 'react'
 import { Geist } from 'next/font/google'
+import Providers from '@/context/Providers'
 import './styles.css'
 
 export const metadata = {
@@ -19,7 +20,11 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang='en'>
       <body>
-        <main className={`${geistSans.className} antialiased`}>{children}</main>
+        <Providers>
+          <main className={`${geistSans.className} antialiased`}>
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   )
