@@ -17,6 +17,12 @@ importers:
       '@payloadcms/payload-cloud':
         specifier: latest
         version: 3.21.0(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))
+      '@payloadcms/plugin-nested-docs':
+        specifier: ^3.21.0
+        version: 3.21.0(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))
+      '@payloadcms/plugin-seo':
+        specifier: ^3.21.0
+        version: 3.21.0(@types/react@19.0.7)(monaco-editor@0.52.2)(next@15.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4))(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
       '@payloadcms/richtext-lexical':
         specifier: latest
         version: 3.21.0(vdr6whs2mb4abukfmp5i5arr54)
@@ -1199,6 +1205,18 @@ packages:
     resolution: {integrity: sha512-TvZZbW64K70J1tRJqNh0af2NIk6XmK1fVS5TkFR7IToT+ex+hxPXWo0FwWiXyelaFhTbiUQjtQJ/up+zB9m7Yg==}
     peerDependencies:
       payload: 3.21.0
+
+  '@payloadcms/plugin-nested-docs@3.21.0':
+    resolution: {integrity: sha512-DBKWiow0pNfs+/GlsurLHufUFwHD8Sz2aCpW+CXLGVen/9VPBqrUtjIixTagqd5UjKkGC/o6gRl1CbFAPg13Hg==}
+    peerDependencies:
+      payload: 3.21.0
+
+  '@payloadcms/plugin-seo@3.21.0':
+    resolution: {integrity: sha512-zPyqgwhyZm7XBD2METUQU/jMWknwdekEkXAtuutA1DQZ2tiehDoPyYq6nY/d0chZKR6aQehIEfWsppS6sINwDA==}
+    peerDependencies:
+      payload: 3.21.0
+      react: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
+      react-dom: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
 
   '@payloadcms/richtext-lexical@3.21.0':
     resolution: {integrity: sha512-mAI0bae1bwpvLZrmi1Taz//wA/IrUyvUk9Yjaku1b98gOdo6DYxj31aFt0lZFUfqUCLE1MC65jWdUGxMvHVT4Q==}
@@ -5258,6 +5276,24 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
       - encoding
+
+  '@payloadcms/plugin-nested-docs@3.21.0(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))':
+    dependencies:
+      payload: 3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
+
+  '@payloadcms/plugin-seo@3.21.0(@types/react@19.0.7)(monaco-editor@0.52.2)(next@15.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4))(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)':
+    dependencies:
+      '@payloadcms/translations': 3.21.0
+      '@payloadcms/ui': 3.21.0(@types/react@19.0.7)(monaco-editor@0.52.2)(next@15.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4))(payload@3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
+      payload: 3.21.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - monaco-editor
+      - next
+      - supports-color
+      - typescript
 
   '@payloadcms/richtext-lexical@3.21.0(vdr6whs2mb4abukfmp5i5arr54)':
     dependencies:

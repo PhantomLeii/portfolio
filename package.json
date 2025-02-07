@@ -16,8 +16,11 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "latest",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
+    "@payloadcms/plugin-nested-docs": "^3.21.0",
+    "@payloadcms/plugin-seo": "^3.21.0",
     "@payloadcms/richtext-lexical": "latest",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
@@ -25,8 +28,7 @@
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "sharp": "0.32.6",
-    "@payloadcms/db-postgres": "latest"
+    "sharp": "0.32.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
