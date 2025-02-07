@@ -1,4 +1,5 @@
 import React from 'react'
+import { Geist } from 'next/font/google'
 import './styles.css'
 
 export const metadata = {
@@ -6,13 +7,19 @@ export const metadata = {
   title: 'Payload Blank Template',
 }
 
+const geistSans = Geist({
+  display: 'swap',
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
-        <main>{children}</main>
+        <main className={`${geistSans.className} antialiased`}>{children}</main>
       </body>
     </html>
   )
