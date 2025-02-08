@@ -1,6 +1,6 @@
 import { seoPlugin } from '@payloadcms/plugin-seo'
 
-seoPlugin({
+export default seoPlugin({
   tabbedUI: true,
   collections: ['pages'],
   uploadsCollection: 'media',

@@ -13,6 +13,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 
 import nestedDocs from './plugins/nestedDocs'
+import seoConfig from './plugins/seoConfig'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -44,5 +45,5 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [nestedDocs],
+  plugins: [nestedDocs, seoConfig],
 })
