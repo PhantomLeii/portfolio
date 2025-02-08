@@ -12,6 +12,8 @@ import { Pages } from './collections/Pages'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 
+import nestedDocs from './plugins/nestedDocs'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -30,7 +32,7 @@ export default buildConfig({
           }
         : false,
   },
-  collections: [Users, Media, Sites, Pages],
+  collections: [Sites, Pages, Media, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -42,8 +44,5 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [
-    payloadCloudPlugin(),
-    // storage-adapter-placeholder
-  ],
+  plugins: [nestedDocs],
 })
