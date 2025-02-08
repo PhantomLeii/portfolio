@@ -2,11 +2,13 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
+import path from 'path'
 import sharp from 'sharp'
 
+import { Sites } from './collections/Sites'
+import { Pages } from './collections/Pages'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 
@@ -19,8 +21,16 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    autoLogin:
+      process.env.NODE_ENV !== 'production'
+        ? {
+            email: 'admin@email.com',
+            password: 'admin',
+            prefillOnly: true,
+          }
+        : false,
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Sites, Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
