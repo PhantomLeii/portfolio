@@ -1,40 +1,52 @@
 {
-  "name": "portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "name": "",
+  "version": "1.0.0",
+  "description": "A blank template to get started with Payload 3.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@formspree/react": "^2.5.1",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.2.10",
-    "lucide-react": "^0.381.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.2.1",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "@payloadcms/db-postgres": "latest",
+    "@payloadcms/next": "latest",
+    "@payloadcms/payload-cloud": "latest",
+    "@payloadcms/plugin-nested-docs": "^3.22.0",
+    "@payloadcms/plugin-seo": "^3.22.0",
+    "@payloadcms/richtext-lexical": "latest",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.8.1",
+    "next": "15.1.5",
+    "payload": "latest",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
-  }
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.5.4",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "15.1.5",
+    "prettier": "^3.4.2",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0",
+    "pnpm": "^9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
