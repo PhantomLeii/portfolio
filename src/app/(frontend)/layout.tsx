@@ -1,10 +1,10 @@
 import React from 'react'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import './styles.css'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  title: "Lebogang Phoshoko | Welcome To Lebogang's Portfolio Website!",
+  description: "Welcome to Lebogang Phoshoko's Portfolio Website!",
 }
 
 const geistSans = Geist({
