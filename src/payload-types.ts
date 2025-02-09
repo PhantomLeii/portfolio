@@ -365,7 +365,7 @@ export interface Header {
     links?:
       | {
           icon: number | Media;
-          link: string;
+          url: string;
           id?: string | null;
         }[]
       | null;
@@ -402,7 +402,7 @@ export interface HeaderSelect<T extends boolean = true> {
           | T
           | {
               icon?: T;
-              link?: T;
+              url?: T;
               id?: T;
             };
       };

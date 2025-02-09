@@ -65,8 +65,8 @@ export const Header: GlobalConfig = {
                   required: true,
                 },
                 {
-                  name: 'link',
-                  label: 'Link',
+                  name: 'url',
+                  label: 'URL',
                   type: 'text',
                   required: true,
                 },
