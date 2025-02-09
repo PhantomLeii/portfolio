@@ -1,6 +1,5 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -14,6 +13,7 @@ import { Media } from './collections/Media'
 
 import nestedDocs from './plugins/nestedDocs'
 import seoConfig from './plugins/seoConfig'
+import { Header } from './globals/Header'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -33,6 +33,7 @@ export default buildConfig({
           }
         : false,
   },
+  globals: [Header],
   collections: [Sites, Pages, Media, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
