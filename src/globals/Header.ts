@@ -29,26 +29,21 @@ export const Header: GlobalConfig = {
           label: 'Navigation',
           fields: [
             {
-              name: 'links',
-              label: 'Links',
+              name: 'navItems',
+              label: 'Navigation Items',
               type: 'array',
               fields: [
                 {
-                  type: 'row',
-                  fields: [
-                    {
-                      name: 'label',
-                      label: 'Label',
-                      type: 'text',
-                      required: true,
-                    },
-                    {
-                      name: 'link',
-                      label: 'Link',
-                      type: 'text',
-                      required: true,
-                    },
-                  ],
+                  name: 'label',
+                  label: 'Label',
+                  type: 'text',
+                  required: true,
+                },
+                {
+                  name: 'link',
+                  label: 'Link',
+                  type: 'relationship',
+                  relationTo: 'pages',
                 },
               ],
             },

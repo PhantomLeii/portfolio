@@ -353,10 +353,10 @@ export interface Header {
     logoText: string;
   };
   navigation?: {
-    links?:
+    navItems?:
       | {
           label: string;
-          link: string;
+          link?: (number | null) | Page;
           id?: string | null;
         }[]
       | null;
@@ -387,7 +387,7 @@ export interface HeaderSelect<T extends boolean = true> {
   navigation?:
     | T
     | {
-        links?:
+        navItems?:
           | T
           | {
               label?: T;
