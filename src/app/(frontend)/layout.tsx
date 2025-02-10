@@ -1,5 +1,6 @@
 import React from 'react'
 import { Geist } from 'next/font/google'
+import Navbar from '@/components/Navbar'
 import './styles.css'
 
 export const metadata = {
@@ -16,9 +17,12 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
-        <main className={`${geistSans.className} antialiased`}>{children}</main>
+        <main className={`${geistSans.className} antialiased`}>
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   )
