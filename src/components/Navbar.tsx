@@ -83,9 +83,11 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="text-xl font-bold text-inherit">
-            Phoshoko<span className="text-secondary-500">.tech</span>
-          </p>
+          <Link href="/" color="foreground">
+            <p className="text-xl font-bold text-inherit">
+              Phoshoko<span className="text-secondary-500">.tech</span>
+            </p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -125,7 +127,7 @@ export default function App() {
 
       <NavbarMenu>
         {navLinks?.map((link, i) => (
-          <NavbarItem key={`${link.url}-${i}`}>
+          <NavbarMenuItem key={`${link.url}-${i}`}>
             <Link
               href={String(link.url)}
               color="foreground"
@@ -133,7 +135,7 @@ export default function App() {
             >
               {link.label}
             </Link>
-          </NavbarItem>
+          </NavbarMenuItem>
         ))}
       </NavbarMenu>
     </Navbar>
