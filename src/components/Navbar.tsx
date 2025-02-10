@@ -59,6 +59,9 @@ export default function App() {
           <NavbarItem>
             <Skeleton className="w-20 h-6 rounded" />
           </NavbarItem>
+          <NavbarItem>
+            <Skeleton className="w-20 h-6 rounded" />
+          </NavbarItem>
         </NavbarContent>
 
         <NavbarContent justify="end">

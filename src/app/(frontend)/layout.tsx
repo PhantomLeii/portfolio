@@ -1,5 +1,5 @@
 import React from 'react'
-import { Geist } from 'next/font/google'
+import { Geist, Geist_Mono } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import './styles.css'
 
@@ -9,6 +9,12 @@ export const metadata = {
 }
 
 const geistSans = Geist({
+  display: 'swap',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
   display: 'swap',
   subsets: ['latin'],
 })
