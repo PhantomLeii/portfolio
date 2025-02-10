@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Header } from '@/payload-types'
+import Image from 'next/image'
 import useSWR from 'swr'
 import {
   Navbar,
@@ -15,13 +16,12 @@ import {
   Skeleton,
   Button,
 } from '@heroui/react'
-import { linkSync } from 'fs'
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const { data, error, isLoading } = useSWR<Header>(
-    '/api/globals/header',
+    '/api/globals/header?depth=1',
     async (url: string) => {
       const res = await fetch(url)
       const body = await res.json()
@@ -30,6 +30,8 @@ export default function App() {
   )
 
   const navLinks = data?.navigation?.navItems
+  const socialLinks = data?.socialLinks?.links
+  console.log(socialLinks)
 
   if (isLoading) {
     return (
@@ -99,8 +101,22 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent justify="end">
+        {socialLinks?.map((link, i) => (
+          <NavbarItem key={`${link.url}-${i}`}>
+            <Link target="_blank" href={String(link.url)} color="foreground">
+              <Image
+                // @ts-ignore
+                src={link.icon.url}
+                // @ts-ignore
+                alt={link.icon.alt}
+                width={28}
+                height={28}
+              />
+            </Link>
+          </NavbarItem>
+        ))}
         <NavbarItem>
-          <Button color="primary">Get Started</Button>
+          <Link></Link>
         </NavbarItem>
       </NavbarContent>
 
