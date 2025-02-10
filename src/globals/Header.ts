@@ -2,6 +2,9 @@ import type { GlobalConfig } from 'payload'
 
 export const Header: GlobalConfig = {
   slug: 'header',
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       type: 'tabs',
@@ -40,10 +43,10 @@ export const Header: GlobalConfig = {
                   required: true,
                 },
                 {
-                  name: 'link',
-                  label: 'Link',
-                  type: 'relationship',
-                  relationTo: 'pages',
+                  name: 'url',
+                  label: 'url',
+                  type: 'text',
+                  required: true,
                 },
               ],
             },

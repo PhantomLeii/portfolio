@@ -356,7 +356,7 @@ export interface Header {
     navItems?:
       | {
           label: string;
-          link?: (number | null) | Page;
+          url: string;
           id?: string | null;
         }[]
       | null;
@@ -391,7 +391,7 @@ export interface HeaderSelect<T extends boolean = true> {
           | T
           | {
               label?: T;
-              link?: T;
+              url?: T;
               id?: T;
             };
       };
