@@ -1,3 +1,5 @@
+import { Button } from '@heroui/button'
+
 export default function Home() {
   return (
     <div className="h-screen flex flex-col justify-center items-center">
@@ -6,6 +8,7 @@ export default function Home() {
         Get started by editing{' '}
         <code className="bg-gray-200 p-1">src/app/frontend/page.tsx</code>
       </p>
+      <Button color="primary">Click Me!</Button>
     </div>
   )
 }
