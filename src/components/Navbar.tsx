@@ -3,6 +3,7 @@
 import React from 'react'
 import { Header } from '@/payload-types'
 import Image from 'next/image'
+import { unstable_cache } from 'next/cache';
 import useSWR from 'swr'
 import {
   Navbar,
@@ -14,7 +15,6 @@ import {
   NavbarMenuItem,
   Link,
   Skeleton,
-  Button,
 } from '@heroui/react'
 
 export default function App() {
@@ -24,8 +24,7 @@ export default function App() {
     '/api/globals/header?depth=1',
     async (url: string) => {
       const res = await fetch(url)
-      const body = await res.json()
-      return body
+      return await res.json()
     }
   )
 
