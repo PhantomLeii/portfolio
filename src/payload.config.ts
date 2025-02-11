@@ -19,8 +19,13 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  serverURL: process.env.SERVER_URL || 'http://localhost:3000',
   admin: {
     user: Users.slug,
+    livePreview: {
+      url: 'http://localhost:3000',
+      collections: ['pages'],
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },
@@ -36,13 +41,13 @@ export default buildConfig({
   globals: [Header],
   collections: [Sites, Pages, Media, Users],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET as string,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI || '',
+      connectionString: process.env.DATABASE_URI as string,
     },
   }),
   sharp,

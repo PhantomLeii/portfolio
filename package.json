@@ -19,6 +19,7 @@
   "dependencies": {
     "@heroui/react": "^2.6.14",
     "@payloadcms/db-postgres": "latest",
+    "@payloadcms/live-preview-react": "^3.22.0",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/plugin-nested-docs": "^3.22.0",
