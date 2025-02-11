@@ -38,7 +38,7 @@ export default function App() {
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            className="sm:hidden"
+            className="md:hidden"
           />
           <NavbarBrand>
             <p className="text-xl text-inherit">
@@ -48,7 +48,7 @@ export default function App() {
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent className="hidden md:flex gap-4" justify="center">
           <NavbarItem>
             <Skeleton className="w-20 h-6 rounded" />
           </NavbarItem>
@@ -79,7 +79,7 @@ export default function App() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
+          className="md:hidden"
         />
         <NavbarBrand>
           <Link href="/" color="foreground">
@@ -90,7 +90,7 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
         {navLinks?.map((link, i) => (
           <NavbarItem key={`${link.url}-${i}`}>
             <Link
@@ -119,9 +119,6 @@ export default function App() {
             </Link>
           </NavbarItem>
         ))}
-        <NavbarItem>
-          <Link></Link>
-        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu>
