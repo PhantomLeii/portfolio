@@ -9,14 +9,14 @@ export const Users: CollectionConfig = {
   fields: [
     {
       name: 'firstName',
-      label: 'First Name',
       type: 'text',
+      label: 'First Name',
       required: true,
     },
     {
       name: 'lastName',
-      label: 'Last Name',
       type: 'text',
-    },
+      label: 'Last Name',
+    }
   ],
 }
