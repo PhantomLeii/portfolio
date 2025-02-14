@@ -17,6 +17,6 @@ export const Users: CollectionConfig = {
       name: 'lastName',
       type: 'text',
       label: 'Last Name',
-    }
+    },
   ],
 }
