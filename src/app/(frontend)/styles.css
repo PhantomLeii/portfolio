@@ -30,4 +30,12 @@
         font-extrabold
         tracking-wide
     }
+
+    p {
+        @apply
+        text-xl
+        md:text-2xl
+        tracking-tight
+        leading-tight
+    }
 }
