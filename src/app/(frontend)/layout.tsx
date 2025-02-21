@@ -16,7 +16,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
       <body>
         <Providers>
           <Navbar />
-          <main>{children}</main>
+          <main className="container mx-auto">{children}</main>
         </Providers>
       </body>
     </html>
