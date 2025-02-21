@@ -31,10 +31,10 @@ const Home = async () => {
     <>
       <main className="min-h-[calc(100vh-64px)] w-full flex flex-col justify-center items-start gap-2">
         <h1>{hero.heading}</h1>
-        <h2>{hero.subHeading}</h2>
-        <p className="mt-8">{hero.description}</p>
+        <h2 className="mt-4">{hero.subHeading}</h2>
+        <p className="mt-4">{hero.description}</p>
 
-        <div className="max-w-7xl mr-auto mt-8 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4 w-full">
+        <div className="border-t border-default-300 py-4 max-w-7xl mr-auto mt-4 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4 w-full">
           {hero.cta.map((item) => (
             <Button
               color="primary"

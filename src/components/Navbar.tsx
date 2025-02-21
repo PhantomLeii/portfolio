@@ -54,27 +54,27 @@ const Component = () => {
   const { menuItems } = getData()
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="py-4">
+      <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="md:hidden"
+          className="lg:hidden"
         />
         <NavbarBrand>
-          <Link color="foreground" className="font-bold tracking-wide text-2xl">
-            Phoshoko.tech
+          <Link
+            color="foreground"
+            className="font-bold tracking-wide text-4xl"
+            href="/"
+          >
+            Phoshoko
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
         {menuItems.map((menuItem) => (
           <NavbarItem key={menuItem.href}>
-            <Link
-              color="foreground"
-              className="text-xl font-semibold"
-              href={menuItem.href}
-            >
+            <Link color="foreground" className="text-xl" href={menuItem.href}>
               {menuItem.label}
             </Link>
           </NavbarItem>
@@ -84,7 +84,7 @@ const Component = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Link
-            className="text-xl"
+            className="text-2xl"
             href="https://github.com/PhantomLeii/"
             color="foreground"
           >
@@ -93,7 +93,7 @@ const Component = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-xl"
+            className="text-2xl"
             href="https://linkedin.com/in/phoshokoml"
             color="foreground"
           >
